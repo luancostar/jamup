@@ -19,12 +19,14 @@
        console.log('Usuário autenticado', response);
        localStorage.setItem('auth_token', response.token); // Exemplo de armazenar token
      } catch (err) {
-       setError('Falha na autenticação. Verifique suas credenciais.');
-     } finally {
-       setLoading(false);
-     }
-   };
- 
+        console.error('Erro ao autenticar:', err);
+        setError('Falha na autenticação. Verifique suas credenciais.');
+      }
+      finally {
+        setLoading(false);
+      }
+    };
+  
    return (
      <div>
        <form onSubmit={handleSubmit}>
