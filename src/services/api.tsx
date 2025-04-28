@@ -2,16 +2,16 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://myband.calledtecnologia.com/usuarios/login.php', // URL base do seu endpoint
+  baseURL: import.meta.env.VITE_API_URL, // pega da variável de ambiente
   headers: {
-    'Content-Type': 'application/json', // Especifica que o corpo da requisição será em JSON
+    'Content-Type': 'application/json',
   },
 });
 
 export const authenticateUser = async (email: string, senha: string) => {
   try {
     const response = await api.post('', { email, senha });
-    return response.data;  // Retorna os dados recebidos do servidor (geralmente um token)
+    return response.data;
   } catch (error) {
     console.error('Erro na autenticação:', error);
     throw error;
