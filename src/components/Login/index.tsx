@@ -32,9 +32,9 @@ const Login = () => {
       {/* Formulário */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
         <div className="w-full max-w-md space-y-6">
-          <div>
-            <h2 className="mb-20 text-3xl font-bold text-gray-900">
-              <img src={logoImg} alt="" />
+        <div className='bg-contain ' style={{backgroundPositionY: "-40px", backgroundImage: "url('/src/assets/bg.gif')" }}>
+            <h2 className="flex justify-center mb-20 text-3xl font-bold text-gray-900">
+              <img width="350px" src={logoImg} alt="" />
               
               
               </h2>
