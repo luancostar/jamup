@@ -45,12 +45,12 @@ export default function LoginForm() {
       <div className="flex min-h-screen">
         {/* Formulário */}
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
-          <div className="w-full max-w-md space-y-6">
-            <div className="bg-contain" style={{ backgroundPositionY: '-40px', backgroundImage: "url('/src/assets/bg.gif')" }}>
-              <h2 className="flex justify-center mb-20 text-3xl font-bold text-gray-900">
+          <div className="w-full text-sm max-w-md space-y-6">
+            <div className="bg-contain" style={{ backgroundPositionY: '-20px', backgroundImage: "url('/src/assets/bg.gif')" }}>
+              <h2 className="flex justify-center mb-3 text-3xl font-bold text-gray-900">
                 <img width="280px" src={logoImg} alt="Logo" />
               </h2>
-              <p className="mt-1 text-sm text-gray-300">Insira seu email e senha para entrar</p>
+              <p className="text-sm text-gray-300">Insira seu email e senha para entrar</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -82,11 +82,11 @@ export default function LoginForm() {
             />
             <span
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-3 top-15 transform -translate-y-1/2 cursor-pointer text-gray-500"
-            >
-    {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
-  </span>
-</div>
+              className="absolute right-3 top-10 transform -translate-y-1/2 cursor-pointer text-gray-500"
+                    >
+              {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
+            </span>
+          </div>
 
               <div className="flex items-center gap-2 text-sm">
                 <input type="checkbox" id="terms" className="h-4 w-4 rounded border-gray-300" />
@@ -100,7 +100,6 @@ export default function LoginForm() {
                   <input type="checkbox" className="h-4 w-4 rounded border-gray-300" />
                   Receber novidades do <strong>JamUp</strong>
                 </label>
-                <a href="#" className="text-blue-600 hover:underline">Esqueci a senha</a>
               </div>
 
               <button
@@ -118,10 +117,12 @@ export default function LoginForm() {
             </form>
 
             {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
+            <a href="#" className="text-blue-600 grid justify-center hover:underline">Esqueci a senha</a>
 
             <p className="text-sm text-center text-gray-600">
               Não tem cadastro? <a href="#" className="font-medium text-black hover:underline">Crie uma conta!</a>
             </p>
+
           </div>
         </div>
 
