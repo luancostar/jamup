@@ -5,6 +5,7 @@ import { authenticateUser } from '../../services/auth';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import coverImg from '../../assets/cover.png';
 import logoImg from '../../assets/logo.png';
+import RegisterModal from './../Modal/RegisterForm';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -12,6 +13,7 @@ export default function LoginForm() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+ 
 
   const navigate = useNavigate(); // Inicializando o hook navigate
 
@@ -42,7 +44,7 @@ export default function LoginForm() {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="flex min-h-screen">
+       <div className="flex min-h-screen">
         {/* Formulário */}
         <div className="w-full md:w-1/2 flex items-center justify-center p-6 md:p-12">
           <div className="w-full text-sm max-w-md space-y-6">
@@ -120,8 +122,8 @@ export default function LoginForm() {
             <a href="#" className="text-blue-600 mb-2 grid justify-center hover:underline">Esqueci a senha</a>
 
             <p className="text-sm text-center text-gray-600">
-              Não tem cadastro? <a href="#" className="font-medium text-black hover:underline">Crie uma conta!</a>
-            </p>
+            Não tem cadastro? <RegisterModal />
+          </p>
 
           </div>
         </div>
