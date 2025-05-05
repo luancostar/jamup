@@ -117,7 +117,7 @@ export default function LoginForm() {
             </form>
 
             {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
-            <a href="#" className="text-blue-600 grid justify-center hover:underline">Esqueci a senha</a>
+            <a href="#" className="text-blue-600 mb-2 grid justify-center hover:underline">Esqueci a senha</a>
 
             <p className="text-sm text-center text-gray-600">
               Não tem cadastro? <a href="#" className="font-medium text-black hover:underline">Crie uma conta!</a>
