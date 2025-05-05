@@ -48,7 +48,7 @@ export default function LoginForm() {
           <div className="w-full max-w-md space-y-6">
             <div className="bg-contain" style={{ backgroundPositionY: '-40px', backgroundImage: "url('/src/assets/bg.gif')" }}>
               <h2 className="flex justify-center mb-20 text-3xl font-bold text-gray-900">
-                <img width="350px" src={logoImg} alt="Logo" />
+                <img width="280px" src={logoImg} alt="Logo" />
               </h2>
               <p className="mt-1 text-sm text-gray-300">Insira seu email e senha para entrar</p>
             </div>
@@ -71,7 +71,7 @@ export default function LoginForm() {
 
               <div className="relative">
               <label htmlFor="password" className="block text-sm font-medium text-gray-400">
-                  Seu Email
+                  Senha
                 </label>
             <input
               type={showPassword ? 'text' : 'password'}

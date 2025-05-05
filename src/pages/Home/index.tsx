@@ -1,9 +1,9 @@
-import NavHome from "../../components/NavHome"
- 
+ import NavHome from "../../components/NavHome"
+
 export default function Home() {
   return (
     <div> 
-      <NavHome/>
+        <NavHome/>
     </div>
   )
 }
