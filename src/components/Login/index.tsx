@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import { authenticateUser } from '../../services/auth';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import coverImg from '../../assets/cover.png';
 import logoImg from '../../assets/logo.png';
 
@@ -10,6 +11,8 @@ export default function LoginForm() {
   const [senha, setSenha] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   const navigate = useNavigate(); // Inicializando o hook navigate
 
   useEffect(() => {
@@ -60,26 +63,30 @@ export default function LoginForm() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="name@mail.com"
+                  placeholder="usuario@email.com"
                   required
                   className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
-              <div>
-                <label htmlFor="password" className="block text-sm font-medium text-gray-400">
-                  Senha
+              <div className="relative">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-400">
+                  Seu Email
                 </label>
-                <input
-                  id="password"
-                  type="password"
-                  value={senha}
-                  onChange={(e) => setSenha(e.target.value)}
-                  placeholder="********"
-                  required
-                  className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+              placeholder="********"
+              className="w-full text-sm px-4 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <span
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-15 transform -translate-y-1/2 cursor-pointer text-gray-500"
+            >
+    {showPassword ? <AiOutlineEyeInvisible size={20} /> : <AiOutlineEye size={20} />}
+  </span>
+</div>
 
               <div className="flex items-center gap-2 text-sm">
                 <input type="checkbox" id="terms" className="h-4 w-4 rounded border-gray-300" />
