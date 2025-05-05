@@ -1,7 +1,7 @@
 // src/App.tsx
 import { BrowserRouter } from 'react-router-dom';  // Importando o BrowserRouter
 import './styles/index.css';
-import { Router } from './pages/router';  // Importando o Router
+import { Router } from './routes/router';  // Importando o Router
 
 function App() {
   return (
