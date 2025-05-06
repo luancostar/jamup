@@ -116,7 +116,7 @@ export default function RegisterModal() {
               className="px-4 py-2 rounded-md bg-purple-600 text-white hover:bg-purple-700 transition"
               disabled={isLoading}  // Desabilita o botão enquanto a requisição está carregando
             >
-              {isLoading ? 'Cadastrando...' : 'Cadastrar'}
+              {isLoading ? 'Cadastrando...' : 'Cadastrar 🎉'}
             </button>
           </div>
         </Dialog.Content>

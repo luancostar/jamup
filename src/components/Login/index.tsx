@@ -52,7 +52,7 @@ export default function LoginForm() {
               <h2 className="flex justify-center mb-3 text-3xl font-bold text-gray-900">
                 <img width="280px" src={logoImg} alt="Logo" />
               </h2>
-              <p className="text-sm text-gray-300">Insira seu email e senha para entrar</p>
+              <p className="text-md font-bold font-sans text-center  text-yellow-500">Suba seu som, amplifique sua vibe 🤟</p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-5">
